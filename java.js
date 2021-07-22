@@ -6,23 +6,22 @@ let max = Math.floor(4);
 let resposta= Math.floor(Math.random() * (max - min + 1)) + min;
 
 document.body.appendChild(text);
-
 switch(resposta){
 
 case 1:
  
-    text.innerHTML= "a resposta é sim"
+    text.innerHTML= "A resposta é sim"
 break;
 
 case 2:
 
-text.innerHTML= "a resposta é não"
+text.innerHTML= "A resposta é não"
 
     
 break;
 
 case 3:
-    text.innerHTML= "a resposta é talvez"
+    text.innerHTML= "A resposta é talvez"
 break;
 
 case 4:
@@ -32,7 +31,13 @@ break;
 }
 }
 function contrato(){
-    window.prompt("digite o seu nome: ");
   
+  let value=window.prompt("digite o seu nome: (mesmo que voce so digite seu primeiro nome saberemos quem é e onde mora...) ");
+  value.split('');
+  if(value.length>=3)
   return  alert("voce acaba de vender a sua alma por 50 centavos");
+  else{ 
+    alert("voce não escreveu o seu nome");
+    contrato();
+    }
 }
